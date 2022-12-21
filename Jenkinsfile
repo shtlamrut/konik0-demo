@@ -38,20 +38,20 @@ pipeline {
     }      
   }
   environment{
-    DOCKERHUB_USERNAME = "kunchalavikram"
+    DOCKERHUB_USERNAME = "dockerHub"
     APP_NAME = "kaniko-webapp-demo"
     IMAGE_NAME = "${DOCKERHUB_USERNAME}" + "/" + "${APP_NAME}"
     IMAGE_TAG = "${BUILD_NUMBER}"
   }
  stages {
-    stage('Checkout SCM') {
-      steps {
-        container('git') {
-          git url: 'https://github.com/kunchalavikram1427/maven-employee-web-application.git',
-          branch: 'master'
-        }
-      }
-    }
+    //stage('Checkout SCM') {
+      //steps {
+        //container('git') {
+          //git url: 'https://github.com/kunchalavikram1427/maven-employee-web-application.git',
+          //branch: 'master'
+        //}
+      //}
+    //}
     stage('Build SW'){
       steps {
         container('maven'){
