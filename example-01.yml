@@ -8,8 +8,8 @@ spec:
     image: gcr.io/kaniko-project/executor:latest
     args:
     - "--dockerfile=Dockerfile"
-    - "--context=git://github.com/kunchalavikram1427/kaniko-demo.git" #git://github.com/kunchalavikram1427/connected-app.git#refs/heads/master
-    - "--destination=kunchalavikram/kaniko-demo-image:latest"
+    - "--context=git@github.com:shtlamrut/konik0-demo.git" #git://github.com/kunchalavikram1427/connected-app.git#refs/heads/master
+    - "--destination=shtlamrut/kanik0-demo-image:latest"
     volumeMounts:
     - name: kaniko-secret
       mountPath: /kaniko/.docker
